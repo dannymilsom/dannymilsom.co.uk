@@ -105,7 +105,7 @@ STATICFILES_DIRS = (
 )
 
 TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, 'static', 'templates'),
+    os.path.join(BASE_DIR, 'templates'),
 )
 
 SITE_ID = 1
