@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}
+Danny Milsom | Blog
+{% endblock %}
+
+{% block message %}
+    <div id="blog-post" class="container">
+    {% if latest_posts %}
+        <h2>LATEST BLOG POSTS</h2>
+    {% else %}
+        <h1>{{ topic|title }} Blog Posts</h1>
+    {% endif %}
+    {% if blog_list %}
+        {% for post in blog_list %}
+            <div class="row blog-post-summary">
+                <div class="hidden-xs col-sm-2 col-md-2 col-lg-1">
+                    <a href="/blog/tags/{{ post.tags|lower }}" title="View all {{ post.tags|lower }} posts">
+                        <img src="/static/dannywebsite/images/{{ post.tags|lower }}.png" class="img-responsive center-block">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-11 post-list">
+                    <a class="post-title" href="/blog/{{ post.slug }}">{{ post.title }} <span class="post-date">{{ post.date }}</span>
+                    <span class="post-summary-text"> {{ post.summary }}</span></a>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <h3> Whoops - looks like there are no blog posts with the tag {{ topic }}.</h3>
+    {% endif %}
+    </div>
+{% endblock %}
+
+{% block pagination %}
+    <div class="container">
+    {% if blog_list.paginator.num_pages > 1 %}
+        <div id="pagination" class="row">
+            {% for page in page_range %}
+                {% if blog_list.number == page %}
+                    <a href="?page={{ page }}" id="current_page_link">{{page}}</a>
+                {% else %}
+                    <a href="?page={{ page }}">{{page}}</a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+        <div id="blog_search" class="row">
+            <div class="col-sm-offset-4 col-sm-4">
+                <select id="site-search" class="hidden-xs center-block text-center" onchange="location = this.options[this.selectedIndex].value;">
+                    <option></option>
+                    <optgroup label="Categories">
+                      {% for category in categories %}
+                        <option value=/blog/tags/{{ category|lower }}>{{ category }}</option>
+                      {% endfor %}
+                    </optgroup>
+                    <optgroup label="Posts">
+                      {% for post in posts %}
+                        <option value=/blog/{{ post.slug }}>{{ post.title }}</option>
+                      {% endfor %}
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

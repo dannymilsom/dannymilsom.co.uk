@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}
+Danny Milsom | {{ topic|title }} Blog Posts
+{% endblock %}
+
+{% block message %}
+    <div class="container">
+        {% if blog_list %}
+            <h1>{{ topic|title }} Blog Posts</h1>
+            {% for post in blog_list %}
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="http://oi59.tinypic.com/scupa1.jpg" class="img-circle img-responsive">
+                </div>
+                <div class="col-md-10">
+                    <h3><a href="/blog/{{ post.slug }}">{{ post.title|title }}</a></h3>
+                    <a class="post-summary" href="/{{ post.slug }}">{{ post.summary }}</a>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+            <h3> Whoops - looks like there are no blog posts with the tag {{ topic }}.</h3>
+        {% endif %}
+    </div>
+{% endblock %}

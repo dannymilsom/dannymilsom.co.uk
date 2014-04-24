@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+Danny Milsom | Blog
+{% endblock %}
+
+{% block message %}
+	<div class="container">
+		<div id="post-not-found" class="row">
+			<div class="col-lg-12 col-md-12">
+				<h1 class="text-center">Sorry - we couldn't find that {{ search }}!</h1>
+				<img class="center-block img-circle img-responsive" title="Sad dog" src="/static/dannywebsite/images/sad-dog.jpg"/>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}
+Danny Milsom | Contact
+{% endblock %}
+
+{% block message %}
+	<div id="contact">
+		<div class="container">
+			<div class="row">
+				<h2>GET IN TOUCH</h2>
+				<p>You can contact me on the usual social networks - 
+				<a href="{{ TWITTER_URL }}">
+				twitter</a>, <a href="">google plus</a> and 
+				<a href="{{ LINKEDIN_URL }}">
+				linkedin</a>. I'm always keen to talk about Python, web 
+				technologies and house music!
+				</p>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 col-md-6">
+					{% load crispy_forms_tags %}
+					<form id="contact-us-form" action="" method="post">
+						{% crispy form %}
+					</form>
+					<div id="contact-us-success" class="hide-it">
+						<i class="fa fa-thumbs-o-up fa-5x"></i> <span id="success-message">Thanks for the email!</span>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-6">
+					{% for tweet in tweets %}
+					<div class="tweet">
+						<a href="{{ TWIITER_URL }}"><img class="img-circle img-responsive" src="{{ avatar }}" title="Follow me on Twitter"/></a>
+						<p>{{ tweet.text|safe }}</p>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

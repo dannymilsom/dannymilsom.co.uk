@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block header %}
+
+    <!-- Syntax Highlighter JavaScript-->
+    <script type="text/javascript" src="//balupton.github.com/jquery-syntaxhighlighter/scripts/jquery.syntaxhighlighter.min.js"></script>
+    <script type="text/javascript">
+      $.SyntaxHighlighter.init({
+	      'wrapLines': true,
+	      'lineNumbers': false,
+	      'alternateLines': false,
+	      'theme': ['google']
+	  });
+     </script>
+
+{% endblock %}
+
+{% block title %}
+Danny Milsom | Blog
+{% endblock %}
+
+{% block message %}
+	<div class="container">
+		<div class="row post-summary">
+			<div class="col-lg-12 col-md-12">
+				<h1>{{ post.title }}</h1>
+				<p>{{ post.message|safe|linebreaks }}</p>
+			</div>
+		</div>
+        <div class="row text-center">
+            <a href="/blog/{{ prev_post.slug }}" class="btn btn-default pull-left post-previous"> Previous Post</a>
+            <a href="/blog/tags/{{ post.tags|lower }}" class="btn btn-default">More {{ post.tags|title }} Posts</a>           
+            <a href="/blog/{{ next_post.slug }}" class="btn btn-default pull-right post-next">Next Post </a>
+        </div>
+		<div id="disqus" class="row">
+			<div class="col-lg-12 col-md-12">
+				{% load disqus_tags %}
+				{% disqus_dev %}
+				{% disqus_show_comments %}
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
