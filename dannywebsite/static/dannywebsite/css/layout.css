@@ -252,6 +252,14 @@ a span.post-date {
 	text-decoration: none;
 }
 
+.post-summary h1 {
+	font-size: 30px;
+}
+
+.post-summary h2 {
+	font-size: 24px;
+}
+
 .post-summary-text {
 	display: block;
 	font-weight: normal;
