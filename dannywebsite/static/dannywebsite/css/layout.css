@@ -148,6 +148,10 @@ p.lead {
 
 .skill-category { position: static; }
 
+#skills .show-skills-text {
+	display: block;
+}
+
 #skills #portfolio img { width: 50%; }
 
 /***** Contact Me *****/
