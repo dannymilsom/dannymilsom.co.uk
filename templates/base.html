@@ -22,7 +22,8 @@
     <link rel="stylesheet" type="text/css" href="/static/dannywebsite/css/select2.css"/>
 
     <!-- Google Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans|Waiting+for+the+Sunrise' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans|Waiting+for+the+Sunrise'
+          rel='stylesheet' type='text/css'>
 
     <!--jQuery -->
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -46,12 +47,12 @@
   </head>
   <body>
     {% load tags %}
-    <!-- Navbar -->
     {% block nav %}
-    <div id="nbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <button type="button" class="navbar-toggle" data-toggle="collapse"
+                  data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -61,43 +62,56 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-left">
-            <li><a class="{% active request '^/blog' %}" href={% url 'latest_posts' %}>Blog</a></li>
-            <li><a class="{% active request '^/music' %}" href={% url 'music' %}>Music</a></li>
-            <li><a class="{% active request '^/contact' %}" href={% url 'contact' %}>Contact</a></li>
+            <li>
+              <a class="{% active request '^/blog' %}"
+                 href={% url 'latest_posts' %}>Blog</a>
+            </li>
+            <li>
+              <a class="{% active request '^/music' %}"
+                 href={% url 'music' %}>Music</a>
+            </li>
+            <li>
+              <a class="{% active request '^/contact' %}"
+                 href={% url 'contact' %}>Contact</a>
+            </li>
           </ul>
           <ul id="social-icons" class="nav navbar-nav navbar-right hidden-xs">
             <li>
-              <a class="fa-stack fa-lg" href="{{ LINKEDIN_URL }}" target="_blank" title="Linkedin Profile">
-                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-              </a>
-            </li>
-            <li>
-              <a class="fa-stack fa-lg" href="{{ TWITTER_URL }}" target="_blank" title="Twitter Account">
-                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-              </a>
-            </li>
-            <li>
-              <a class="fa-stack fa-lg" href="{{ GITHUB_URL }}" target="_blank" title="GitHub Profile">
+              <a class="fa-stack fa-lg" href="{{ GITHUB_URL }}"
+                 target="_blank" title="GitHub Profile">
                 <i class="fa fa-github fa-stack-1x fa-inverse"></i>
               </a>
             </li>
             <li>
-              <a class="fa-stack fa-lg" href="{{ STACKOVERFLOW_URL }}" target="_blank" title="Stack Overflow Profile">
+              <a class="fa-stack fa-lg" href="{{ STACKOVERFLOW_URL }}"
+                 target="_blank" title="Stack Overflow Profile">
                 <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
               </a>
             </li>
             <li>
-              <a class="fa-stack fa-lg" href="{{ INSTAGRAM_URL }}" target="_blank" title="Instagram Account">
+              <a class="fa-stack fa-lg" href="{{ LINKEDIN_URL }}"
+                 target="_blank" title="Linkedin Profile">
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+              </a>
+            </li>
+            <li>
+              <a class="fa-stack fa-lg" href="{{ TWITTER_URL }}"
+                 target="_blank" title="Twitter Account">
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </a>
+            </li>
+            <li>
+              <a class="fa-stack fa-lg" href="{{ INSTAGRAM_URL }}"
+                 target="_blank" title="Instagram Account">
                 <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
               </a>
             </li>
           </ul>
         </div>
       </div>
-    </div>
+    </nav>
     {% endblock %}
-    <div id="main">
-
+    <div id="content-wraper">
       {% block heading %}
       {% endblock %}
 

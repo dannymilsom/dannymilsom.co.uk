@@ -5,37 +5,39 @@ Danny Milsom | Contact
 {% endblock %}
 
 {% block message %}
-	<div id="contact">
-		<div class="container">
-			<div class="row">
-				<h2>GET IN TOUCH</h2>
-				<p>You can contact me on the usual social networks - 
-				<a href="{{ TWITTER_URL }}">
-				twitter</a>, <a href="">google plus</a> and 
-				<a href="{{ LINKEDIN_URL }}">
-				linkedin</a>. I'm always keen to talk about Python, web 
-				technologies and house music!
-				</p>
-			</div>
-			<div class="row">
-				<div class="col-sm-12 col-md-6">
-					{% load crispy_forms_tags %}
-					<form id="contact-us-form" action="" method="post">
-						{% crispy form %}
-					</form>
-					<div id="contact-us-success" class="hide-it">
-						<i class="fa fa-thumbs-o-up fa-5x"></i> <span id="success-message">Thanks for the email!</span>
-					</div>
-				</div>
-				<div class="col-sm-12 col-md-6">
-					{% for tweet in tweets %}
-					<div class="tweet">
-						<a href="{{ TWIITER_URL }}"><img class="img-circle img-responsive" src="{{ avatar }}" title="Follow me on Twitter"/></a>
-						<p>{{ tweet.text|safe }}</p>
-					</div>
-					{% endfor %}
-				</div>
-			</div>
-		</div>
-	</div>
+<div id="contact" class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Let's Talk</h2>
+      <p id="contact-intro">You can contact me on the usual suspects - 
+        <a href="{{ TWITTER_URL }}">Twitter</a>, <a href="">Google Plus</a> and 
+        <a href="{{ LINKEDIN_URL }}">Linkedin</a>. Alternatively you can 
+        fire off an email using the form below - or send one yourself to 
+        <a href="mailto:dannymilsom@hotmail.co.uk">dannymilsom@hotmail.co.uk</a>. 
+        I'm always keen to talk about Python, web technologies and house music!</p>
+    </div>
+    <div class="hidden-xs col-md-6 col-md-push-6">
+      {% for tweet in tweets %}
+      <div class="tweet">
+        <a href="{{ TWITTER_URL }}">
+          <img class="img-circle img-responsive" src="{{ avatar }}"
+               title="Follow me on Twitter"/>
+        </a>
+        <span>{{ tweet.text|safe }}</span>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="col-sm-12 col-md-6 col-md-pull-6">
+      {% load crispy_forms_tags %}
+      <form id="contact-us-form" action="" method="post">
+        {% crispy form %}
+      </form>
+      <div id="contact-us-success" class="hide-it">
+        <i class="fa fa-thumbs-o-up fa-5x"></i>
+        <span id="success-message">Thanks for the email!</span>
+      </div>
+    </div>
+
+  </div>
+</div>
 {% endblock %}

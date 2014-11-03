@@ -39,10 +39,10 @@
             $("#portfolio").css("margin-top", $(".skill-text", this).innerHeight());
 
             // ensure all the category images have opacity 1
-            $(".skill-category").removeClass("focused active")
+            $(".skill-category").removeClass("focused active");
 
             // Reveal skill and blur out other categories
-            $(".skill-text", this).addClass("show-skills-text")
+            $(".skill-text", this).addClass("show-skills-text");
             $(".skill-category").addClass("focused");
             $(this).addClass("active");
           }
@@ -61,7 +61,7 @@
                   $("#warning-message, #warning-list").remove();
                   $("input, textarea").removeClass('validation-warning');
 
-                  for (m in data['errors']) {
+                  for (var m in data['errors']) {
                     if (m === 'email') {
                       $("#id_email").val("");
                     }
@@ -72,20 +72,20 @@
                   $("#contact-us-form").slideUp( "slow");
                   $("#contact-us-success").removeClass("hide-it")
                                            .slideDown("slow");
-                  $("#success-message").html(data['message'])
+                  $("#success-message").html(data['message']);
                 }
               }
           });
       });
 
     }
-  }
+  };
 
    /**
   * initialise the website JavaScript once the DOM is ready
   */
   $(function() {
     layout.init();
-  })
+  });
 
 })(jQuery);

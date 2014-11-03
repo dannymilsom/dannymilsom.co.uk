@@ -5,118 +5,132 @@ Danny Milsom | Home
 {% endblock %}
 
 {% block message %}
-	<div id="homepage" class="container">
-		<div id="about">
-			<div class="row">
-				<h2>WELCOME</h2>
-				<div class="col-xs-12 about-text no-padding">
-					<img class="img-circle img-responsive" src="/static/dannywebsite/images/danny.jpg"/>
-					<p>
-					I'm a recent graduate who has experience working with a range 
-					of Open Source technologies to build responsive and highly scalable  
-					web applications.
-					</p>
-					<p>
-					For the last two years I've been working for CGI, where I have 
-					contributed to their application management platform by writing 
-					idiomatic Python and presenting to prospective clients. Outside of 
-					my project work, I've helped to organise both Python and 
-					Red Hat training sessions for other CGI members, and represented 
-					CGI at PyConUK.
-					</p>
-					<p>
-					In my own time I've built a number of websites using the Python 
-					web framework django, including a website for the  
-					<a href="http://emmagolding.co.uk/">textile designer Emma Golding</a> 
-					and my own <a href="">personal blog</a>. This has given me the freedom 
-					to experiment with new technologies and improve my front end 
-					skillset.
-					</p>
-					<p>
-					My family home is in Bristol, I spent three years at the University 
-					of Leeds, and I currently live Reading. In my spare time I enjoy 
-					walking my family dog, playing sports and <a href="https://soundcloud.com/inthecity123"> pretending to be a DJ</a>.
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
+<div id="homepage" class="container">
+  <section id="about" class="row">
+    <div class="col-xs-12 about-text no-padding">
+      <h1>Welcome</h2>
+      <img class="img-circle img-responsive"
+           src="/static/dannywebsite/images/danny.jpg"/>
+      <p>I’m a highly motivated and competent full stack developer, who 
+        enjoys working with Open Source technologies to build responsive 
+        and scalable web applications.</p>
+      <p>For the last two years I've worked for 
+        <a href="http://www.cgi.com/en">CGI</a>, where I have contributed 
+        to their application management platform which we deliver as a SaaS. 
+        This has included ownership of solution design, significant 
+        development work with Python and end user engagement to improve
+        usability. Outside of my project work I've helped to distribute 
+        technical knowledge across the UK business, and attended industry 
+        specific conferences such as PyConUK.</p>
+      <p>In my own time I've built a number of websites, using 
+        a range of both established and bleeding edge technologies. This 
+        includes <a href="https://github.com/dannymilsom/stronger">
+        Stronger</a>, a workout tracking tool built using 
+        <a href="https://www.djangoproject.com/">Django</a>; and 
+        <a href="https://github.com/dannymilsom/distributed-poker">
+        Distributed Poker</a>, a real time planning poker poker app built 
+        using <a href="http://nodejs.org/">NodeJS</a> (a demo is hosted on 
+        <a href="http://distributed-poker.herokuapp.com/heroku"> Heroku</a>).
+        Away from the computer I enjoy playing football, walking the family 
+        dog and <a href="https://soundcloud.com/inthecity123"> pretending 
+        to be a DJ</a>.</p>
+    </div>
+  </section>
 
-	<div id="skills">
-		<div class="container">
-			<div class="row featurette">
-				<h2>PORTFOLIO</h2>
-				<div id="server-side" class="col-sm-3 text-center skill-category">
-				  <img class="img-responsive center-block" title="Server side technology" src="/static/dannywebsite/images/server1-circle.png"/>
-				  <p class="lead text-center">Server Side</p>
-				  <p class="skill-text">For the last two years I've been writing code for an application using a LAPP stack.
-				   This has given me exposure to <a href="http://www.redhat.com/products/enterprise-linux/">
-				   Red Hat Enterprise Linux</a>, <a href="http://httpd.apache.org/">Apache HTTP Server</a>, <a href="http://www.postgresql.org/">PostgreSQL</a> and <a href="http://www.python.org/">Python</a>.
-				   I'm particularly familiar with the later, and have enjoyed sharing this knowledge with 
-				   others by delivering Python training sessions across the UK. In the near future I hope
-				   to start working towards <a href="http://www.redhat.com/training/certifications/rhcsa/">
-				   RHEL System Administration accreditation</a>, to build upon the existing skills I have
-				   aquired when working on <a href="http://www.ubuntu.com/">Ubuntu</a> and <a href="http://www.redhat.com/products/enterprise-linux/">RHEL</a> systems. I'm also interested in NoSQL databases, 
-				   and have had some exposure to <a href="http://cassandra.apache.org/">Cassandra</a> 
-				   through my project work.
-				 </p>
-				</div>
-				<div id="client-side" class="col-sm-3 skill-category">
-				  <img class="img-responsive center-block" title="Client side technology" src="/static/dannywebsite/images/screen1-circle.png"/>
-				  <p class="lead text-center">Client Side</p>
-				  <p class="skill-text">I'm no stranger to server side technologies either, and have a good working knowledge of
-				   HTML, CSS and JavaScript. I've used these skills to build responsive, mobile friendly and 
-				   intuitive user iterfaces - and take great pride in my work. In addition to these core scripting
-				   languages, I often use <a href="http://jquery.com/">jQuery</a> to speed up the development workflow, <a href="https://developer.mozilla.org/en/docs/AJAX">AJAX</a> to improve the user experience,  
-				   and have recently started to utilise <a href="http://lesscss.org/">LESS</a> to make my style sheets more maintainable.
-				 </p>
-				</div>
-				<div id="frameworks" class="col-sm-3 skill-category">
-				  <img class="img-responsive center-block" title="Frameworks" src="/static/dannywebsite/images/frame1-circle.png"/>
-				  <p class="lead text-center">Frameworks</p>
-					<p class="skill-text">The application management and collaboration tool I have worked on for the last
-					   two years is a fork of the <a href="http://trac.edgewall.org/">Trac framework</a>. 
-					   Consequently I'm very familiar with the backend design and implementation of Trac, and have written a number of 
-					   plugins to extend its functionality. This includes burn down chart, 
-					   notification system and project template plugins, as well as a number of wiki macros to 
-					   improve the user experience. I'm also familiar with the <a href="https://www.djangoproject.com/">
-					   Django</a> web framework, which I've used to build a number of websites, and the front end <a href="http://getbootstrap.com/"> Twitter Bootstrap</a> framework, which I've also used in both a professional capacity, 
-					   and for my own side projects.
-					 </p>
-				</div>
-				<div id="tools" class="col-sm-3 skill-category">
-				  <img class="img-responsive center-block" title="Version control" src="/static/dannywebsite/images/vcs1-circle.png"/>
-				  <p class="lead text-center">Tools</p>
-				  <p class="skill-text">I use both <a href="http://subversion.apache.org/">Subversion</a> and <a href="http://git-scm.com/">Git</a> on a daily basis, and believe VCS are best practice often undervalued. When working with Subversion repositories, I usually utilise Git-SVN to bridge the gap between the two technologies and increase the functionality available. Sublime-Text is also my editor of choice, and I use a range of packages to maximise my productivity as a developer.
-				 </p>
-				</div>
-			</div>
-			<div id="portfolio" class="row">
-				<div class="col-xs-6 col-sm-3">
-				  <a href="https://github.com/dannymilsom" target="_blank">
-				  	<img class="skills-img img-responsive center-block" title="GitHub" src="/static/dannywebsite/images/github.png"/>
-				  	<p class="lead text-center">Github</p>
-				  </a>
-				</div>
-				<div class="col-xs-6 col-sm-3">
-				  <a href="http://trac-hacks.org/" target="_blank">
-				  	<img class="skills-img img-responsive center-block" title="Trac plugins" src="/static/dannywebsite/images/trac-logo.png"/>
-				  	<p class="lead text-center">Trac Plugins</p>
-				  </a>
-				</div>
-				<div class="col-xs-6 col-sm-3">
-				  <a href="http://stackoverflow.com/users/1178602/dannymilsom" target="_blank">
-				  	<img class="skills-img img-responsive center-block" title="Stack Overflow" src="/static/dannywebsite/images/stackoverflow.png"/>
-				  	<p class="lead text-center">Stack Overflow</p>
-				  </a>
-				</div>
-				<div class="col-xs-6 col-sm-3">
-				  <a href={% url 'latest_posts' %}>
-				  	<img class="skills-img img-responsive center-block" title="Blog" src="/static/dannywebsite/images/blog.png"/>
-				  	<p class="lead text-center">Technical Blog</p>
-				  </a>
-				</div>
-			</div>
-		</div>
-	</div>
+  <section id="skills" class="row">
+    <div id="technical-skills" class="col-xs-12 featurette no-padding">
+      <div id="server-side" class="col-sm-3 text-center skill-category">
+        <img class="img-responsive center-block" title="Server side technology"
+             src="/static/dannywebsite/images/server1-circle.png"/>
+        <span class="lead text-center">Server Side</span>
+        <p class="skill-text">I'm fluent in object oriented, idiomatic 
+          <a href="https://www.python.org/">Python</a>; but have also used 
+          <a href="https://java.com/en/">Java</a> and 
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+          JavaScript</a> as server side languages. Most of my commercial 
+          experience has been working with a LAPP stack, which has helped me 
+          grow my expertise in a range of development envioronments 
+          (<a href="http://www.redhat.com/products/enterprise-linux/">Red Hat 
+          Enterprise Linux</a> / <a href="http://www.ubuntu.com/">Ubuntu</a>) 
+          and relational databases (<a href="http://www.postgresql.org/">
+          PostgreSQL</a> / <a href="http://www.sqlite.org/">SQLite</a>). I'm 
+          also interested in the flexibility of NoSQL, after some 
+          exposure to <a href="http://cassandra.apache.org/">Cassandra</a>.</p>
+      </div>
+      <div id="client-side" class="col-sm-3 skill-category">
+        <img class="img-responsive center-block" title="Client side technology"
+             src="/static/dannywebsite/images/screen1-circle.png"/>
+        <span class="lead text-center">Client Side</span>
+        <p class="skill-text">I have a strong working knowledge of HTML, CSS 
+          and JavaScript; and have used these skills to build responsive, 
+          mobile friendly and intuitive user interfaces. In addition to these 
+          core scripting languages, I often use <a href="http://jquery.com/">
+          jQuery</a> to mitigate browser compatability issues, CSS 
+          pre-processors such as <a href="http://lesscss.org/">LESS</a> to 
+          make my style sheets more maintainable, and modern JavaScript 
+          frameworks such as <a href="http://backbonejs.org/">Backbone JS</a> 
+          to create richer user experiences.</p>
+      </div>
+      <div id="frameworks" class="col-sm-3 skill-category">
+        <img class="img-responsive center-block" title="Frameworks"
+             src="/static/dannywebsite/images/frame1-circle.png"/>
+        <span class="lead text-center">Frameworks</span>
+        <p class="skill-text">I have a solid understanding and many years 
+          experience using the <a href="https://www.djangoproject.com/">
+          Django</a> web framework, having built a number of websites 
+          using this technology. I have also written numerous plugins 
+          and macros to extend the functionality of the 
+          <a href="http://trac.edgewall.org/">Trac framework</a> during my 
+          time at CGI, and utilised <a href="http://getbootstrap.com/"> 
+          Twitter Bootstrap</a> both in professional capacity, and in my 
+          own side projects.</p>
+      </div>
+      <div id="tools" class="col-sm-3 skill-category">
+        <img class="img-responsive center-block" title="Version control"
+             src="/static/dannywebsite/images/vcs1-circle.png"/>
+        <span class="lead text-center">Tools</span>
+        <p class="skill-text">I use DVCS such as <a href="http://git-scm.com/">
+          Git</a> and more traditional VCS such as 
+          <a href="http://subversion.apache.org/"> Subversion</a> on a daily 
+          basis as part of my workflow, utilising the power of branching and 
+          merging to support parallel development. Working in an agile team 
+          I've also used configuration management tools such as 
+          <a href="http://www.ansible.com/home">Ansible</a> and continuous 
+          integration tools such as <a href"http://jenkins-ci.org/">Jenkins</a> 
+          to reduce the burden of manual system administration and improve 
+          the quality of deliverable software.</p>
+      </div>
+    </div>
+    <div id="portfolio" class="col-xs-12 featurette no-padding">
+      <div class="col-xs-6 col-sm-3">
+        <a href="https://github.com/dannymilsom" target="_blank">
+          <img class="skills-img img-responsive center-block" title="GitHub"
+               src="/static/dannywebsite/images/github.png"/>
+          <span class="lead text-center">Github</span>
+        </a>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <a href="http://trac-hacks.org/" target="_blank">
+          <img class="skills-img img-responsive center-block" title="Trac plugins"
+               src="/static/dannywebsite/images/trac-logo.png"/>
+          <span class="lead text-center">Trac Plugins</span>
+        </a>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <a href="http://stackoverflow.com/users/1178602/dannymilsom" target="_blank">
+          <img class="skills-img img-responsive center-block" title="Stack Overflow"
+               src="/static/dannywebsite/images/stackoverflow.png"/>
+          <span class="lead text-center">Stack Overflow</span>
+        </a>
+      </div>
+      <div class="col-xs-6 col-sm-3">
+        <a href={% url 'latest_posts' %}>
+          <img class="skills-img img-responsive center-block"
+               title="Blog" src="/static/dannywebsite/images/blog.png"/>
+          <span class="lead text-center">Technical Blog</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
 {% endblock %}
