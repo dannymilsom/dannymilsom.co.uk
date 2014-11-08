@@ -1,6 +1,6 @@
+from django.core.urlresolvers import reverse
 from django.db import models
 from django.template.defaultfilters import slugify
-from django.db.models import permalink
 
 class Post(models.Model):
 
@@ -30,6 +30,5 @@ class Post(models.Model):
 	def __unicode__(self):
 	    return self.title
 
-	@permalink
 	def get_absolute_url(self):
-		return ('Post', None, { 'slug': self.slug })
+		return reverse('blog.views.individual_post', kwargs={'postSlug': self.slug})

@@ -37,6 +37,7 @@ Danny Milsom | Blog
     <div class="col-lg-12 col-md-12">
       {% load disqus_tags %}
       {% set_disqus_identifier post.slug %}
+      {% set_disqus_url absolute_url %}
       {% disqus_dev %}
       {% disqus_show_comments %}
     </div>

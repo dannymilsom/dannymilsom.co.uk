@@ -32,6 +32,7 @@ def individual_post(request, postSlug):
         'post': post,
         'prev_post': prev_post,
         'next_post': next_post,
+        'absolute_url': request.build_absolute_uri(post.get_absolute_url())
     }
 
     return render(request, 'singlepost.html', data)
