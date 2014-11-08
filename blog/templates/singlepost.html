@@ -36,6 +36,7 @@ Danny Milsom | Blog
   <section id="blog-comments" class="row">
     <div class="col-lg-12 col-md-12">
       {% load disqus_tags %}
+      {% set_disqus_identifier post.slug %}
       {% disqus_dev %}
       {% disqus_show_comments %}
     </div>
