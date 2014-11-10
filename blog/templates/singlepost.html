@@ -1,16 +1,7 @@
 {% extends "base.html" %}
 
 {% block header %}
-<!-- Syntax Highlighter JavaScript-->
-<script type="text/javascript" src="//balupton.github.com/jquery-syntaxhighlighter/scripts/jquery.syntaxhighlighter.min.js"></script>
-<script type="text/javascript">
-  $.SyntaxHighlighter.init({
-    'wrapLines': true,
-    'lineNumbers': false,
-    'alternateLines': false,
-    'theme': ['google']
-  });
-</script>
+<link rel="stylesheet" type="text/css" href="/static/dannywebsite/css/pygments.css"/>
 {% endblock %}
 
 {% block title %}
