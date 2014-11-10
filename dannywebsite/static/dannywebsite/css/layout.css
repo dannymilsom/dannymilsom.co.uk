@@ -271,6 +271,8 @@ a span.post-date { text-decoration: none; }
 
 #post-not-found img { margin-bottom: 20px; }
 
+#blog-comments { margin-top: 20px; }
+
 /***** CODE SNIPPETS *****/
 
 pre {
