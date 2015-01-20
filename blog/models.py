@@ -16,6 +16,7 @@ class Post(models.Model):
 		('Bootstrap', 'Bootstrap'),
 		('Apache HTTP', 'Apache HTTP'),
 		('PostgreSQL', 'PostgreSQL'),
+		('Backbone', 'Backbone'),
 	)
 
 	title = models.CharField(max_length=100)
