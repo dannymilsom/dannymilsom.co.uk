@@ -162,13 +162,12 @@ nav li a {
 #contact-us-form .form-control { border-radius: 0; }
 
 #contact-us-form input[type='submit'] {
-  background-color: #3A0000;
+  background-color: #9D4646;
   margin-bottom: 10px;
-  border-radius: 0;
 }
 
 #contact-us-form input[type='submit']:hover {
-  background-color: #9D4646;
+  background-color: #3A0000;
 }
 
 #contact-us-success { color: #003A00; }
