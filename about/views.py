@@ -23,7 +23,7 @@ def contact(request):
         if form.is_valid():
                 clean_data = form.cleaned_data
                 send_mail('New website email', clean_data['message'], 
-                          clean_data['email'], ['dannymilsom@hotmail.co.uk'])
+                          clean_data['email'], [settings.GMAIL_ADDRESS])
 
                 if request.is_ajax():
                     json_respsone = {
@@ -42,7 +42,10 @@ def contact(request):
             return HttpResponse(json.dumps(json_response), 
                                 content_type="application/json")
 
-    data = {'form': form}
+    data = {
+        'form': form,
+        'gmail_address': settings.GMAIL_ADDRESS
+    }
 
     # get latest twitter posts
     twitter = Twython('IWhiXqAMXlQizxNbmGYUHg', 

@@ -1,4 +1,5 @@
 from django import forms
+from django.conf import settings
 
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit, Layout
@@ -13,7 +14,7 @@ class ContactForm(forms.Form):
     email = forms.EmailField(
         label = 'Email',
         widget = forms.TextInput(
-            attrs = {'placeholder': 'dannymilsom@hotmail.co.uk',
+            attrs = {'placeholder': settings.GMAIL_ADDRESS,
                      'class': 'form-control'})
                  )
     message = forms.CharField(
