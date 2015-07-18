@@ -45,8 +45,6 @@ blockquote {
 
 /***** Util Classes *****/
 
-.no-padding { padding: 0 !important; }
-
 .block { display: block; }
 
 .hide-it { display: none; }
@@ -73,7 +71,6 @@ nav {
 
 nav .navbar-header a {
   font-weight: 600;
-  padding-left: 0;
   color: #FFF;
   text-decoration: none;
 }
@@ -141,7 +138,10 @@ nav li a {
 
 #skills .logo { width: 30%; }
 
-.skill-text { display: block; }
+.skill-text { 
+  display: block;
+  padding: 0;
+}
 
 .skill-category { position: static; }
 
@@ -355,6 +355,7 @@ pre {
     left: 0;
     right: 0;
     display: none;
+    padding: 0 15px;
   }
   #about img {
     width: 15%;
