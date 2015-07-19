@@ -7,14 +7,14 @@ from django.template.defaultfilters import stringfilter
 from django.utils.encoding import force_unicode
 from django.utils.safestring import mark_safe
 
-def individual_post(request, postSlug):
+def individual_post(request, slug):
     """
     Returns an individual blog post, identified by its slug. If the get() 
     method raises a DoesNotExist exception, we render the postnotfound template.
     """
 
     try:
-        post = Post.objects.get(slug=postSlug)
+        post = Post.objects.get(slug=slug)
     except Post.DoesNotExist:
         return render(request, 'notfound.html', {'search': 'post'})
 
