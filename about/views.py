@@ -7,8 +7,21 @@ from django.core.mail import send_mail
 from django.conf import settings
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.views.generic import TemplateView
 
 from about.forms import ContactForm
+
+
+class Homepage(TemplateView):
+    """Returns the site homepage, with text describing skills and experience."""
+
+    template_name = 'homepage.html'
+
+
+class Music(TemplateView):
+    """Returns the music page, with links to soundcloud and embedded iframes."""
+
+    template_name = 'music.html'
 
 
 def contact(request):
