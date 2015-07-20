@@ -55,32 +55,34 @@
         });
       }
 
-      $("#contact-us-form").submit(function() {
+      $("#contact-us-form").submit(function(e) {
           e.preventDefault();
-          $.ajax({
-              type: 'POST',
-              dataType: 'json',
-              crossDomain: false, // needed by is_ajax() server side
-              data: $(this).serialize(),
-              success: function(data) {
-                if (data['errors']) {
-                  $("#warning-message, #warning-list").remove();
-                  $("input, textarea").removeClass('validation-warning');
 
-                  for (var m in data['errors']) {
-                    if (m === 'email') {
-                      $("#id_email").val("");
-                    }
-                    $("#id_" + m).addClass('validation-warning')
-                                 .attr('placeholder', m + " - " + data['errors'][m]);
-                  }
-                } else {
-                  $("#contact-us-form").slideUp( "slow");
-                  $("#contact-us-success").removeClass("hide-it")
-                                           .slideDown("slow");
-                  $("#success-message").html(data['message']);
+          var response = $.ajax({
+            type: 'POST',
+            dataType: 'json',
+            crossDomain: false, // needed by is_ajax() server side
+            data: $(this).serialize()
+          });
+
+          response.done(function(data) {
+            if (data['errors']) {
+              $("#warning-message, #warning-list").remove();
+              $("input, textarea").removeClass('validation-warning');
+
+              for (var m in data['errors']) {
+                if (m === 'email') {
+                  $("#id_email").val("");
                 }
+                $("#id_" + m).addClass('validation-warning')
+                             .attr('placeholder', m + " - " + data['errors'][m]);
               }
+            } else {
+              $("#contact-us-form").slideUp( "slow");
+              $("#contact-us-success").removeClass("hide-it")
+                                       .slideDown("slow");
+              $("#success-message").html(data['message']);
+            }
           });
       });
 
