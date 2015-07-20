@@ -19,32 +19,37 @@
 
       if (matchMedia('only screen and (min-width: 767px)').matches) {
 
-        $(".skill-category").click(function(e) {
+        var $skillCategory = $(".skill-category"),
+            $skillText = $(".skill-text"),
+            $portfolio =  $("#portfolio");
+
+        $skillCategory.on('click', function(e) {
           e.stopPropagation();
+
           if ($(this).hasClass("active")) {
             // hide text
-            $(".skill-text").removeClass("show-skills-text");
+            $skillText.removeClass("show-skills-text");
 
             // remove inline margin
-            $("#portfolio").css("margin-top", "");
+            $portfolio.css("margin-top", "");
 
             // remove focused and active classes
-            $(".skill-category").removeClass("focused");
+            $skillCategory.removeClass("focused");
             $(this).removeClass("active");
           }
           else {
             // make sure all skill rows are hidden
-            $(".skill-text").removeClass("show-skills-text");
+            $skillText.removeClass("show-skills-text");
 
             // calculate how much margin we need for the text
-            $("#portfolio").css("margin-top", $(".skill-text", this).innerHeight());
+            $portfolio.css("margin-top", $(".skill-text", this).innerHeight());
 
             // ensure all the category images have opacity 1
-            $(".skill-category").removeClass("focused active");
+            $skillCategory.removeClass("focused active");
 
             // Reveal skill and blur out other categories
             $(".skill-text", this).addClass("show-skills-text");
-            $(".skill-category").addClass("focused");
+            $skillCategory.addClass("focused");
             $(this).addClass("active");
           }
         });
