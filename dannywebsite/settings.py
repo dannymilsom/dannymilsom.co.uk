@@ -52,7 +52,6 @@ LOCAL_APPS = (
 )
 
 THIRD_PARTY_APPS = (
-    'south',
     'crispy_forms',
     'disqus',
     'pagedown',
