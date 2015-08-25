@@ -1,0 +1,64 @@
+{% load tags %}
+
+<nav class="navbar navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+      <a class="navbar-brand" href={% url 'homepage' %}>Danny Milsom</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-left">
+        <li>
+          <a class="{% active request '^/blog' %}"
+             href={% url 'latest_posts' %}>Blog</a>
+        </li>
+        <li>
+          <a class="{% active request '^/music' %}"
+             href={% url 'music' %}>Music</a>
+        </li>
+        <li>
+          <a class="{% active request '^/contact' %}"
+             href={% url 'contact' %}>Contact</a>
+        </li>
+      </ul>
+      <ul id="social-icons" class="nav navbar-nav navbar-right hidden-xs">
+        <li>
+          <a class="fa-stack fa-lg" href="{{ GITHUB_URL }}"
+             target="_blank" title="GitHub Profile">
+            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+          </a>
+        </li>
+        <li>
+          <a class="fa-stack fa-lg" href="{{ STACKOVERFLOW_URL }}"
+             target="_blank" title="Stack Overflow Profile">
+            <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+          </a>
+        </li>
+        <li>
+          <a class="fa-stack fa-lg" href="{{ LINKEDIN_URL }}"
+             target="_blank" title="Linkedin Profile">
+            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+          </a>
+        </li>
+        <li>
+          <a class="fa-stack fa-lg" href="{{ TWITTER_URL }}"
+             target="_blank" title="Twitter Account">
+            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+          </a>
+        </li>
+        <li>
+          <a class="fa-stack fa-lg" href="{{ INSTAGRAM_URL }}"
+             target="_blank" title="Instagram Account">
+            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
