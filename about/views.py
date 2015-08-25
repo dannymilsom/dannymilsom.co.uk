@@ -1,6 +1,4 @@
 import json
-import datetime
-import json
 from twython import Twython
 
 from django.core.mail import send_mail

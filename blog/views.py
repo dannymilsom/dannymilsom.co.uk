@@ -1,11 +1,13 @@
+from django.core.paginator import (
+    Paginator,
+    EmptyPage,
+    PageNotAnInteger,
+    InvalidPage,
+)
 from django.shortcuts import render
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger, InvalidPage
-from blog.models import Post
 
-from django import template
-from django.template.defaultfilters import stringfilter
-from django.utils.encoding import force_unicode
-from django.utils.safestring import mark_safe
+from .models import Post
+
 
 def individual_post(request, slug):
     """
