@@ -5,133 +5,242 @@ Danny Milsom | Home
 {% endblock %}
 
 {% block message %}
-<div id="homepage" class="container">
-  <section id="about" class="row">
-    <div class="col-xs-12 about-text">
-      <h1>Welcome</h2>
-      <img class="img-circle img-responsive"
-           src="/static/dannywebsite/images/danny-crete.png"/>
-      <p>I’m a full stack developer based in Bristol, who enjoys working with Open 
-        Source technologies to build intuitive, responsive and scalable web 
-        applications.</p>
-      <p>For the last few months I've been enjoying life at 
-        <a href="https://p.ota.to/">Potato</a>, building complex websites using 
-        Django on Google App Engine. While most of my time is spent solving 
-        problems server side with Python, I've also helped to build single 
-        page apps with Backbone and various other JS frameworks.
-      </p>
-      <p>In my previous life I worked for <a href="http://www.cgi.com/en">CGI</a>; 
-        where I collaborated with a distributed team to develop and deliver a 
-        configuration management platform forked from Trac. Outside of my day to 
-        day developer commitments, I helped to distribute technical 
-        knowledge across the UK business, and attended industry specific 
-        conferences such as PyConUK.</p>
-      <p>In my own time I use side projects as an opportunity to learn new 
-        technologies, languages and frameworks. These works in progress include  
-        <a href="https://github.com/dannymilsom/stronger">Stronger</a>, a 
-        workout tracking tool built using Django; 
-        <a href="https://github.com/dannymilsom/distributed-poker">
-        Distributed Poker</a>, a real time planning poker poker app built 
-        using NodeJS/SocketIO; and 
-        <a href="https://github.com/dannymilsom/soundcloud-likes">Soundcloud-Likes</a>, 
-        a single page application to discover new music built on Backbone.
-      <p>Away from the computer I enjoy playing football, walking the family 
-        dog and <a href="https://soundcloud.com/inthecity123"> pretending to be 
-        a DJ</a>.</p>
+<div id="homepage">
+
+  <section id="welcome-banner">
+    <div class="container">
+      <div id="welcome" class="row">
+        <div class="col-xs-12 about-text"></div>
+      </div>
     </div>
   </section>
 
-  <section id="skills" class="row">
-    <div id="technical-skills" class="col-xs-12 featurette">
-      <div id="server-side" class="col-sm-3 text-center skill-category">
-        <img class="img-responsive center-block" title="Server side technology"
-             src="/static/dannywebsite/images/server1-circle.png"/>
-        <span class="lead text-center">Server Side</span>
-        <p class="skill-text col-sm-12">I'm fluent in object oriented, idiomatic 
-          <a href="https://www.python.org/">Python</a>; but have also used 
-          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>
-          and <a href="https://java.com/en/">Java</a> as server side languages. 
-          Most of my commercial experience has been working with a LAPP stack, 
-          which has helped me grow my expertise in a range of development envioronments 
-          (<a href="http://www.redhat.com/products/enterprise-linux/">Red Hat 
-          Enterprise Linux</a> / <a href="http://www.ubuntu.com/">Ubuntu</a>) 
-          and relational databases (<a href="http://www.postgresql.org/">
-          PostgreSQL</a> / <a href="http://www.sqlite.org/">SQLite</a>). I'm 
-          also interested in the flexibility of NoSQL, after some 
-          exposure to <a href="http://cassandra.apache.org/">Cassandra</a>.</p>
-      </div>
-      <div id="client-side" class="col-sm-3 skill-category">
-        <img class="img-responsive center-block" title="Client side technology"
-             src="/static/dannywebsite/images/screen1-circle.png"/>
-        <span class="lead text-center">Client Side</span>
-        <p class="skill-text col-sm-12">I have a strong working knowledge of HTML, CSS 
-          and JavaScript; and have used these skills to build responsive, 
-          mobile friendly and intuitive user interfaces. I've also taken 
-          advantage of MVC frameworks such as <a href="http://backbonejs.org/">
-          Backbone JS</a> to structure my JS applications, CSS pre-processors 
-          including as <a href="http://lesscss.org/">LESS</a> to supercharge my 
-          CSS, and a variety of other JS libraries to make my life easier 
-          (<a href="http://jquery.com/">jQuery</a> / <a href="http://requirejs.org/">
-          RequireJS</a> / <a href="http://underscorejs.org/">Underscore</a> etc).
-      </div>
-      <div id="frameworks" class="col-sm-3 skill-category">
-        <img class="img-responsive center-block" title="Frameworks"
-             src="/static/dannywebsite/images/frame1-circle.png"/>
-        <span class="lead text-center">Frameworks</span>
-        <p class="skill-text col-sm-12">I have a solid understanding and many years 
-          experience using the <a href="https://www.djangoproject.com/">
-          Django</a> web framework, having built a number of websites 
-          using this technology. I have also written numerous plugins 
-          and macros to extend the functionality of the 
-          <a href="http://trac.edgewall.org/">Trac framework</a> during my 
-          time at CGI, and utilised <a href="http://getbootstrap.com/"> 
-          Twitter Bootstrap</a> both in professional capacity, and in my 
-          own side projects.</p>
-      </div>
-      <div id="tools" class="col-sm-3 skill-category">
-        <img class="img-responsive center-block" title="Version control"
-             src="/static/dannywebsite/images/vcs1-circle.png"/>
-        <span class="lead text-center">Tools</span>
-        <p class="skill-text col-sm-12">I use DVCS such as <a href="http://git-scm.com/">
-          Git</a> and more traditional VCS such as 
-          <a href="http://subversion.apache.org/"> Subversion</a> on a daily 
-          basis as part of my workflow, utilising the power of branching and 
-          merging to support parallel development. Working in an agile team 
-          I've also used configuration management tools such as 
-          <a href="http://www.ansible.com/home">Ansible</a> and continuous 
-          integration tools such as <a href"http://jenkins-ci.org/">Jenkins</a> 
-          to reduce the burden of manual system administration and improve 
-          the quality of deliverable software.</p>
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div id="portfolio" class="featurette">
+          <div class="section-header">
+            <h2>About Me</h2>
+            <p>Hello and welcome! I'm Danny!
+          </div>
+          <div class="section-body">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <img class="skills-img img-responsive" title="GitHub"
+                   src="/static/dannywebsite/images/github.png"/>
+              <span class="lead">Full Stack Developer</span>
+              <p>I’m a full stack developer based in Bristol, who enjoys working with Open 
+              Source technologies to build intuitive and scalable web applications.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <img class="skills-img img-responsive" title="Trac plugins"
+                   src="/static/dannywebsite/images/trac-logo.png"/>
+              <span class="lead">Working at Potato</span>
+              <p>For the last few months I've been enjoying life at 
+              <a href="https://p.ota.to/">Potato</a>, building complex websites using 
+              Django on Google App Engine.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <img class="skills-img img-responsive" title="Stack Overflow"
+                   src="/static/dannywebsite/images/stackoverflow.png"/>
+              <span class="lead">Loves Learning</span>
+              <p>In my own time I use side projects as an opportunity to learn new 
+              technologies, languages and frameworks.</p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+              <img class="skills-img img-responsive" title="Blog"
+                   src="/static/dapnnywebsite/images/blog.png"/>
+              <span class="lead">Big City Fan</span>
+              <p>Away from the keyboard I play football and support my local team,
+              walk the family dog and <a href="https://soundcloud.com/inthecity123"> 
+              pretend to be a DJ</a>.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div id="portfolio" class="col-xs-12 featurette">
-      <div class="col-xs-6 col-sm-3">
-        <a href="https://github.com/dannymilsom" target="_blank">
-          <img class="skills-img img-responsive center-block" title="GitHub"
-               src="/static/dannywebsite/images/github.png"/>
-          <span class="lead text-center">Github</span>
-        </a>
+  </section>
+
+  <section id="technical-skills">
+    <div class="container">
+      <div class="row">
+        <div class="featurette">
+          <div class="section-header">
+            <h2>Skills</h2>
+          </div>
+          <div class="section-body">
+            <div id="server-side" class="col-sm-3 col-md-6 skill-category">
+              <img class="skills-img img-responsive" title="Server side technology"
+                   src="/static/dannywebsite/images/server1-circle.png"/>
+              <span class="lead">Server Side</span>
+              <p class="skill-text col-sm-12">I'm fluent in object oriented, idiomatic 
+                <a href="https://www.python.org/">Python</a>; and well versed in modern
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a>
+                and <a href="https://java.com/en/">Java</a> as server side languages. 
+                Most of my commercial experience has been working with a LAPP stack, 
+                which has helped me grow my expertise in a range of development envioronments 
+                (<a href="http://www.redhat.com/products/enterprise-linux/">Red Hat 
+                Enterprise Linux</a> / <a href="http://www.ubuntu.com/">Ubuntu</a>) 
+                and relational databases (<a href="http://www.postgresql.org/">
+                PostgreSQL</a> / <a href="http://www.sqlite.org/">SQLite</a>)</p>
+            </div>
+            <div id="client-side" class="col-sm-3 col-md-6 skill-category">
+              <img class="skills-img img-responsive" title="Client side technology"
+                   src="/static/dannywebsite/images/screen1-circle.png"/>
+              <span class="lead">Client Side</span>
+              <p class="skill-text col-sm-12">I have a strong working knowledge of HTML, CSS 
+                and JavaScript; and have used these skills to build responsive, 
+                mobile friendly and intuitive user interfaces. I've also taken 
+                advantage of MVC frameworks such as <a href="http://backbonejs.org/">
+                Backbone JS</a> to structure my JS applications, CSS pre-processors 
+                including as <a href="http://lesscss.org/">LESS</a> to supercharge my 
+                CSS, and a variety of other JS libraries to make my life easier 
+                (<a href="http://jquery.com/">jQuery</a> / <a href="http://requirejs.org/">
+                RequireJS</a> / <a href="http://underscorejs.org/">Underscore</a> etc).</p>
+            </div>
+            <div id="frameworks" class="col-sm-3 col-md-6 skill-category">
+              <img class="skills-img img-responsive" title="Frameworks"
+                   src="/static/dannywebsite/images/frame1-circle.png"/>
+              <span class="lead">Frameworks</span>
+              <p class="skill-text col-sm-12">I have a solid understanding and many years 
+                experience using the <a href="https://www.djangoproject.com/">
+                Django</a> web framework, having built a number of websites 
+                using this technology. I have also written numerous plugins 
+                and macros to extend the functionality of the 
+                <a href="http://trac.edgewall.org/">Trac framework</a> during my 
+                time at CGI, and utilised <a href="http://getbootstrap.com/"> 
+                Twitter Bootstrap</a> both in professional capacity, and in my 
+                own side projects.</p>
+            </div>
+            <div id="tools" class="col-sm-3 col-md-6 skill-category">
+              <img class="skills-img img-responsive" title="Version control"
+                   src="/static/dannywebsite/images/vcs1-circle.png"/>
+              <span class="lead">Version Control</span>
+              <p class="skill-text col-sm-12">I use DVCS such as <a href="http://git-scm.com/">
+                Git</a> and more traditional VCS such as 
+                <a href="http://subversion.apache.org/"> Subversion</a> on a daily 
+                basis as part of my workflow, utilising the power of branching and 
+                merging to support parallel development. Working in an agile team 
+                I've also used configuration management tools such as 
+                <a href="http://www.ansible.com/home">Ansible</a> and continuous 
+                integration tools such as <a href="http://jenkins-ci.org/">Jenkins</a> 
+                to reduce the burden of manual system administration and improve 
+                the quality of deliverable software.</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-xs-6 col-sm-3">
-        <a href="http://trac-hacks.org/" target="_blank">
-          <img class="skills-img img-responsive center-block" title="Trac plugins"
-               src="/static/dannywebsite/images/trac-logo.png"/>
-          <span class="lead text-center">Trac Plugins</span>
-        </a>
+    </div>
+  </section>
+
+  <section id="side-projects">
+    <div class="container">
+      <div class="row">
+          <div class="col-xs-12">
+            <div class="section-header">
+              <h2>Side Projects</h2>
+              <p>In my own time I use side projects as an opportunity to learn new 
+                technologies, languages and frameworks. These works in progress include  
+                <a href="https://github.com/dannymilsom/stronger">Stronger</a>, a 
+                workout tracking tool built using Django; 
+                <a href="https://github.com/dannymilsom/distributed-poker">
+                Distributed Poker</a>, a real time planning poker poker app built 
+                using NodeJS/SocketIO; and 
+                <a href="https://github.com/dannymilsom/soundcloud-likes">Soundcloud-Likes</a>, 
+                a single page application to discover new music built on Backbone.</p>
+            </div>
+            <div class="section-body">
+              <div class="col-xs-12 col-sm-8 soundcloud-likes">
+              </div>
+              <div class="col-xs-12 col-sm-4 planning-poker">
+              </div>
+              <div class="col-xs-12 col-sm-4 personal-site">
+              </div>
+              <div class="col-xs-12 col-sm-8 stronger">
+              </div>
+            </div>
+          </div>
       </div>
-      <div class="col-xs-6 col-sm-3">
-        <a href="http://stackoverflow.com/users/1178602/dannymilsom" target="_blank">
-          <img class="skills-img img-responsive center-block" title="Stack Overflow"
-               src="/static/dannywebsite/images/stackoverflow.png"/>
-          <span class="lead text-center">Stack Overflow</span>
-        </a>
+    </div>
+  </section>
+  <section id="music">
+    <div  class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="section-header">
+            <h2>House Music</h2>
+            <p>When I find the time I enjoying listening to house music and 
+               mixing records with my Pioneer CDJ1000s. You can listen to some of my 
+               sets which I've uploaded to <a href="https://soundcloud.com/inthecity123">
+               soundcloud</a> over the last few years below:
+            </p>
+          </div>
+          <div class="section-body">
+            <iframe width="100%" height="166" scrolling="no" frameborder="no"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/102470549&amp;color=3A0000&amp;auto_play=false&amp;show_artwork=true"></iframe>
+            <iframe width="100%" height="166" scrolling="no" frameborder="no"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/28527581&amp;color=3A0000&amp;auto_play=false&amp;show_artwork=true"></iframe>
+          </div>
+        </div>
       </div>
-      <div class="col-xs-6 col-sm-3">
-        <a href={% url 'latest_posts' %}>
-          <img class="skills-img img-responsive center-block"
-               title="Blog" src="/static/dannywebsite/images/blog.png"/>
-          <span class="lead text-center">Technical Blog</span>
-        </a>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="section-header">
+            <h2>Let's Talk</h2>
+            <p>If you'd like to get in touch, you can reach me on the usual channels
+               or via good old fashioned email!</p>
+          </div>
+          <div class="section-body col-xs-12">
+            <ul id="social-icons">
+              <li>
+                <a class="fa-stack fa-lg" href="{{ GITHUB_URL }}"
+                   target="_blank" title="GitHub Profile">
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </a>
+              </li>
+              <li>
+                <a class="fa-stack fa-lg" href="{{ STACKOVERFLOW_URL }}"
+                   target="_blank" title="Stack Overflow Profile">
+                  <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+                </a>
+              </li>
+              <li>
+                <a class="fa-stack fa-lg" href="{{ LINKEDIN_URL }}"
+                   target="_blank" title="Linkedin Profile">
+                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </a>
+              </li>
+              <li>
+                <a class="fa-stack fa-lg" href="{{ TWITTER_URL }}"
+                   target="_blank" title="Twitter Account">
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </a>
+              </li>
+              <li>
+                <a class="fa-stack fa-lg" href="{{ INSTAGRAM_URL }}"
+                   target="_blank" title="Instagram Account">
+                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                </a>
+              </li>
+            </ul>
+            <div class="row">
+              {% load crispy_forms_tags %}
+              <form id="contact-us-form" action="" method="post">
+                {% crispy form %}
+              </form>
+            </div>
+            <div class="row">
+              <div class="confirmation hidden col-xs-12">
+                <i class="fa fa-check-square fa-5x"></i>
+                <span class="message"></span>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>

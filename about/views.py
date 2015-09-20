@@ -1,82 +1,45 @@
-import json
-from twython import Twython
-
-from django.core.mail import send_mail
 from django.conf import settings
-from django.http import HttpResponse
+from django.core.urlresolvers import reverse_lazy
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from django.views.generic.edit import FormView
 
 from about.forms import ContactForm
 
 
-class Homepage(TemplateView):
-    """Returns the site homepage, with text describing skills and experience."""
+class AjaxableResponseMixin(object):
+    """AJAX support for form submissions - to be used with a GCBV."""
 
-    template_name = 'homepage.html'
-
-
-class Music(TemplateView):
-    """Returns the music page, with links to soundcloud and embedded iframes."""
-
-    template_name = 'music.html'
-
-
-def contact(request):
-    """
-    Returns a contact form and data taken from the twitter API via twython.
-    """
-
-    if request.method == 'GET':
-        form = ContactForm()
-    else:
-        form = ContactForm(request.POST)
-        if form.is_valid():
-                clean_data = form.cleaned_data
-                send_mail('New website email', clean_data['message'], 
-                          clean_data['email'], [settings.GMAIL_ADDRESS])
-
-                if request.is_ajax():
-                    json_respsone = {
-                        'errors': False,
-                        'message': "Thanks for getting in touch {}. "
-                                   "I'll endevour to reply within 24 hours! "
-                                   "Danny".format(clean_data['name'])
-                    }
-
-                    return HttpResponse(json.dumps(json_respsone), 
-                                        content_type="application/json")
+    def form_invalid(self, form):
+        response = super(AjaxableResponseMixin, self).form_invalid(form)
+        if self.request.is_ajax():
+            return JsonResponse(form.errors, status=400)
         else:
-            json_response = {
-                'errors':  form.errors,
-            }
-            return HttpResponse(json.dumps(json_response), 
-                                content_type="application/json")
+            return response
 
-    data = {
-        'form': form,
-        'gmail_address': settings.GMAIL_ADDRESS
-    }
+    def form_valid(self, form):
+        response = super(AjaxableResponseMixin, self).form_valid(form)
 
-    # get latest twitter posts
-    twitter = Twython('IWhiXqAMXlQizxNbmGYUHg', 
-        '230gGuTQm2lCi8YcmZcf4SibseQJmmNE5Wn3ZBvAg', 
-        '168158421-dZZYSYdsE43nKRgNGx5wzKhhHlb7FIA1XWJvlqNJ',
-        'CimXe6LTOeWPaTCETsg6MpcpZ6FInIyxGns2xSKtQfJWE'
-    )
+        form.send_mail()
 
-    try:
-        tweets = twitter.get_user_timeline(count=4)
-    except:
-        tweets = None
+        if self.request.is_ajax():
+            thank_you_message = "Sent! Thanks for getting in touch {}.".format(
+                form.cleaned_data['name'])
+            data = {'message': thank_you_message }
+            return JsonResponse(data)
+        else:
+            return response
 
-    if tweets:
-        for tweet in tweets:
-            tweet['text'] = Twython.html_for_tweet(tweet)
 
-        avatar_url = tweets[0]['user']['profile_image_url']
+class Homepage(AjaxableResponseMixin, FormView):
+    """Returns the site homepage, with experience text and contact form."""
 
-        data['tweets'] = tweets
-        data['avatar'] = avatar_url
+    form_class = ContactForm
+    template_name = 'homepage.html'
+    success_url = reverse_lazy('homepage')
 
-    return render(request, 'contact.html', data)
+    def get_context_data(self, **kwargs):
+        context = super(Homepage, self).get_context_data(**kwargs)
+        context['gmail_address'] = settings.GMAIL_ADDRESS
+        return context
