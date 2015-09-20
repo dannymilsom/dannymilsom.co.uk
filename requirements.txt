@@ -17,6 +17,9 @@ requests-futures==0.9.5
 requests-oauthlib==0.5.0
 six==1.9.0
 sqlparse==0.1.16
-twython==3.3.0
 virtualenv==13.1.2
 wsgiref==0.1.2
+nose
+django-nose
+nose-progressive
+disabledoc
