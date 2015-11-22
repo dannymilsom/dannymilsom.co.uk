@@ -115,8 +115,9 @@ INTERNAL_IPS = ('127.0.0.1',)
 
 GMAIL_ADDRESS = 'dannysmilsom@gmail.com'
 TWITTER_PROFILE_URL = 'https://twitter.com/DannyMilsom'
-GITHUB_PROFILE_URL = 'https://github.com/dannymilsom'
+GITHUB_PROFILE_URL = 'https://github.com/dannymilsom/'
 LINKEDIN_PROFILE_URL = 'http://uk.linkedin.com/pub/danny-milsom/51/20b/7250'
 STACKOVERFLOW_PROFILE_URL = 'http://stackoverflow.com/users/1178602/dannymilsom'
 INSTAGRAM_PROFILE_URL = 'http://instagram.com/dannymilsom'
+SOUNDCLOUD_URL = 'https://soundcloud.com/inthecity123'
 
