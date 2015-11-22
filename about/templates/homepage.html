@@ -52,7 +52,7 @@ Danny Milsom | Home
                    src="/static/dannywebsite/images/blog.png"/>
               <span class="lead">Dog Lover</span>
               <p>Away from the keyboard I play football and support my hometown team,
-              Bristol City. I also enjoy walking my dog and <a href="https://soundcloud.com/inthecity123"> 
+              Bristol City. I also enjoy walking my dog and <a href="{{SOUNDCLOUD_URL}}"> 
               pretend to be a DJ</a>.</p>
             </div>
           </div>
@@ -141,22 +141,46 @@ Danny Milsom | Home
               <h2>Side Projects</h2>
               <p>In my own time I use side projects as an opportunity to learn new 
                 technologies, languages and frameworks. These works in progress include  
-                <a href="https://github.com/dannymilsom/stronger">Stronger</a>, a 
+                <a href="{{GITHUB_URL}}stronger">Stronger</a>, a 
                 workout tracking tool built using Django; 
-                <a href="https://github.com/dannymilsom/distributed-poker">
+                <a href="{{GITHUB_URL}}distributed-poker">
                 Distributed Poker</a>, a real time planning poker poker app built 
                 using NodeJS/SocketIO; and 
-                <a href="https://github.com/dannymilsom/soundcloud-likes">Soundcloud-Likes</a>, 
+                <a href="{{GITHUB_URL}}soundcloud-likes">Soundcloud-Likes</a>, 
                 a single page application to discover new music built on Backbone.</p>
             </div>
             <div class="section-body">
-              <div class="col-xs-12 col-sm-8 soundcloud-likes">
+              <div class="col-xs-12 col-sm-6 soundcloud-likes">
+                <figure>
+                  <img src=""/>
+                  <figcaption>
+                    <span><a href="{{GITHUB_URL}}soundcloud-likes">Soundcloud Likes</a></span>
+                  </figcaption>
+                </figure>
               </div>
-              <div class="col-xs-12 col-sm-4 planning-poker">
+              <div class="col-xs-12 col-sm-6 planning-poker">
+                <figure>
+                  <img src=""/>
+                  <figcaption>
+                    <span><a href="{{GITHUB_URL}}distributed-poker">Planning Poker</a></span>
+                  </figcaption>
+                </figure>
               </div>
-              <div class="col-xs-12 col-sm-4 personal-site">
+              <div class="col-xs-12 col-sm-6 personal-site">
+                <figure>
+                  <img src=""/>
+                  <figcaption>
+                    <span><a href="{{GITHUB_URL}}dannymilsom.co.uk">Personal Site and Blog</a></span>
+                  </figcaption>
+                </figure>
               </div>
-              <div class="col-xs-12 col-sm-8 stronger">
+              <div class="col-xs-12 col-sm-6 stronger">
+                <figure>
+                  <img src=""/>
+                  <figcaption>
+                    <span><a href="{{GITHUB_URL}}dannymilsom/stronger">Stronger</a></span>
+                  </figcaption>
+                </figure>
               </div>
             </div>
           </div>
@@ -171,7 +195,7 @@ Danny Milsom | Home
             <h2>House Music</h2>
             <p>When I find the time I enjoying listening to house music and 
                mixing records with my Pioneer CDJ1000s. You can listen to some of my 
-               sets which I've uploaded to <a href="https://soundcloud.com/inthecity123">
+               sets which I've uploaded to <a href="{{SOUNDCLOUD_URL}}">
                soundcloud</a> over the last few years below:
             </p>
           </div>
