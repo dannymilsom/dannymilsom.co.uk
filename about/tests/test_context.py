@@ -17,3 +17,4 @@ class ContextProcessorTests(TestCase):
         self.assertIn('LINKEDIN_URL', context)
         self.assertIn('STACKOVERFLOW_URL', context)
         self.assertIn('INSTAGRAM_URL', context)
+        self.assertIn('SOUNDCLOUD_URL', context)
