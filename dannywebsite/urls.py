@@ -4,7 +4,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 urlpatterns = patterns('about.views',
-	url(r'', include('about.urls'))
+    url(r'', include('about.urls'))
 )
 
 urlpatterns += patterns('blog.views',
@@ -12,7 +12,7 @@ urlpatterns += patterns('blog.views',
 )
 
 urlpatterns += patterns('',
-	url(r'^admin/', include(admin.site.urls), name='admin'),
+    url(r'^admin/', include(admin.site.urls), name='admin'),
 )
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
