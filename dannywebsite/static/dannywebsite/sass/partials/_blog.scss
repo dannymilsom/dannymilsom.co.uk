@@ -1,0 +1,107 @@
+#pagination {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.post_metadata {
+  border-bottom: 1px solid #DDDDDD;
+  padding-bottom: 5px;
+}
+
+.post-previous, .post-next { 
+  font-size: 0;
+  margin: 0 15px;
+ } 
+
+.post-previous::before { 
+  content: "\2190";
+  font-size: 14px;
+  display: inline;
+} 
+
+.post-next::after {
+  content: "\2192";
+  font-size: 14px;
+}
+
+.post-list { margin-bottom: 10px; }
+
+.post-title {
+  color: $burgandy;
+  font-size: 18px;
+  display: block;
+  text-decoration: none;
+}
+
+a span.post-date { text-decoration: none; }
+
+.post-date {
+  font-weight: lighter;
+  color: #808080;
+  font-size: 14px;
+}
+
+.post-summary { 
+  color: #333;
+  border-bottom: 0;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+
+.post-summary h1 { font-size: 30px; }
+
+.post-summary h2 { font-size: 24px; }
+
+.post-summary-text {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  color: #333;
+}
+
+.blog-post-summary { margin-bottom: 5px; }
+
+#blog_search { margin-bottom: 40px; }
+
+#current_page_link { text-decoration: underline; }
+
+#site-search {
+  margin: 20px 0 40px;
+  width: 100%;
+}
+
+#post-not-found img { margin-bottom: 20px; }
+
+#blog-comments { margin-top: 20px; }
+
+/***** CODE SNIPPETS *****/
+
+pre {
+  border: none;
+  background-color: #EBE9E6;
+  word-wrap: normal;
+  overflow: auto;
+}
+
+.date {
+  color: #999999;
+  font-weight: 400;
+}
+
+.tags {
+  border: 2px solid #EEE;
+  height: 200px;
+  font-size: 30px;
+  color: $white;
+  text-align: center;
+  line-height: 200px;
+  background-size: cover;
+  cursor: pointer; 
+}
+
+.tags span:first-child {
+  opacity: 0;
+  font-weight: bold;
+  color: #92131C;
+}

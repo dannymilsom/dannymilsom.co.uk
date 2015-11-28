@@ -1,0 +1,22 @@
+.technical-skills {
+  @include section-padding();
+  background-color: $cloudy-grey;
+
+  img {
+    @include auto-margin();
+    display: block;
+  }
+
+  span.lead {
+    display: block;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  p {
+    color: $light-black;
+    display: block;
+  }
+
+  .category { text-align: center; }
+}

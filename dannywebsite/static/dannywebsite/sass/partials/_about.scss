@@ -1,0 +1,24 @@
+.about {
+  @include section-padding();
+  background-color: $white;
+  margin-bottom: 20px;
+
+  p {color: $light-black;}
+
+  img {
+    @include auto-margin();
+    width: 35%;
+  }
+
+  span.lead {
+    display: block;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+.about img,
+.technical-skills img {
+  margin-bottom: 10px;
+  width: 25%;
+}

@@ -1,0 +1,46 @@
+.contact {
+  @include section-padding();
+  background-color: $navy-blue;
+  color: $white;
+
+  h2 {color: $white;}
+
+  a {
+    color: $white;
+    text-decoration: underline;
+
+    &:hover { color: $warning-red; }
+  }
+
+  form {
+    .form-control {
+      background-color: $light-navy;
+      border: 0;
+      border-radius: 0;
+      color: $white;
+      text-align: center;
+    }
+
+    input[type='submit'] {
+      background-color: $green;
+      border: 0;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      &:hover { color: $light-black; }
+    }
+
+    .validation-warning {
+      background-color: $warning-red;
+      color: $white;
+    }
+  }
+
+  .confirmation {
+    color: $green;
+    padding: 20px 0;
+    text-align: center;
+
+    i { display: block; }
+  }
+}

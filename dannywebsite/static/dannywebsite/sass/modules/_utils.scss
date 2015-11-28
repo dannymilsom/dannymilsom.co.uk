@@ -1,0 +1,18 @@
+.block { display: block; }
+
+.hidden { display: none; }
+
+.focused {
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+}
+
+.lead { font-size: 18px; }
+
+.textinput { margin-bottom: 5px; }
+
+.textarea { margin-bottom: 5px; }
+
+.warning-message { text-decoration: underline; }
+

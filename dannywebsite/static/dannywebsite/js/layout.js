@@ -17,7 +17,7 @@
     },
     bindListeners: function() {
 
-      $("#contact-us-form").submit(function(e) {
+      $(".contact form").submit(function(e) {
           e.preventDefault();
 
           var response = $.ajax({
