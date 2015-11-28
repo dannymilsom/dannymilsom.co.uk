@@ -5,8 +5,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass');
 
 // Path Variables
-var scss_src = 'dannywebsite/static/dannywebsite/sass/**/*.scss',
-    scss_dst = 'dannywebsite/static/dannywebsite/css/';
+var scss_src = 'src/dannywebsite/static/dannywebsite/sass/**/*.scss',
+    scss_dst = 'src/dannywebsite/static/dannywebsite/css/';
 
 gulp.task('styles', function() {
     gulp.src(scss_src)
