@@ -5,30 +5,33 @@ Danny Milsom | Blog
 {% endblock %}
 
 {% block message %}
-<div id="blog" class="container">
+<div class="page-banner">
   {% if latest_posts %}
     <h1>Latest Blog Posts</h1>
+    <p>Ramblings about web development...</p>
   {% else %}
     <h1>{{ topic|title }} Blog Posts</h1>
+    <p>Ramblings about {{ topic|lower }}...</p>
   {% endif %}
+</div>
+<div class="container">
   {% if blog_list %}
-    <section id="blog-post-links">
+    <section class="blog">
+      <div class="row">
       {% for post in blog_list %}
-        <div class="row blog-post-summary">
-          <div class="hidden-xs col-sm-2 col-md-2 col-lg-1">
-            <a href="/blog/tags/{{ post.tags|lower }}"
-               title="View all {{ post.tags|lower }} posts">
-                <img class="img-responsive center-block"
-                     src="/static/dannywebsite/images/{{ post.tags|lower }}.png">
-            </a>
-          </div>
-          <div class="col-xs-12 col-sm-10 col-md-10 col-lg-11 post-list">
-              <a class="post-title" href="/blog/{{ post.slug }}">
-                {{ post.title }} <span class="post-date">{{ post.date }}</span>
-                <span class="post-summary-text"> {{ post.summary }}</span></a>
-          </div>
+        <div class="blog-preview col-xs-12 col-sm-6 col-md-4">
+          <a href="/blog/{{ post.slug }}"
+             title="Read blog post">
+              <div class="img-wrapper">
+                <img src="/static/dannywebsite/images/book.jpg">
+              </div>
+              <span class="post-title">{{ post.title }} </span>
+              <span class="post-date">{{ post.date }} </span>
+              <span class="post-summary"> {{ post.summary }}</span>
+          </a>
         </div>
       {% endfor %}
+      </div>
     </section>
   {% else %}
     <h3> Whoops - looks like there are no blog posts with the tag {{ topic }}.</h3>
@@ -39,18 +42,18 @@ Danny Milsom | Blog
 {% block pagination %}
 <div class="container">
 {% if blog_list.paginator.num_pages > 1 %}
-  <div id="pagination" class="row">
+  <div class="pagination" class="row">
     {% for page in page_range %}
       {% if blog_list.number == page %}
-        <a href="?page={{ page }}" id="current_page_link">{{page}}</a>
+        <a href="?page={{ page }}" class="current_page">{{page}}</a>
       {% else %}
         <a href="?page={{ page }}">{{page}}</a>
       {% endif %}
     {% endfor %}
   </div>
 {% endif %}
-  <div id="blog_search" class="row">
-    <div class="col-sm-offset-4 col-sm-4">
+  <div class="blog-search row">
+    <div class="col-xs-12">
       <select id="site-search" class="hidden-xs center-block text-center"
               onchange="location = this.options[this.selectedIndex].value;">
         <option></option>

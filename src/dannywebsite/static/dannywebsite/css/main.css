@@ -1,3 +1,28 @@
+/* Colours */
+.pagination {
+  display: block;
+  text-align: center; }
+  .pagination a {
+    border: 1px solid #b9c1c8;
+    border-radius: 4px;
+    padding: 10px;
+    text-decoration: none; }
+    .pagination a.current_page {
+      background-color: #3a0000;
+      color: #fff;
+      font-weight: 700; }
+  .pagination .previous,
+  .pagination .next {
+    font-size: 0;
+    margin: 0 15px; }
+  .pagination .previous::before {
+    content: "\2190";
+    font-size: 14px;
+    display: inline; }
+  .pagination .next::after {
+    content: "\2192";
+    font-size: 14px; }
+
 .block {
   display: block; }
 
@@ -21,7 +46,6 @@
 .warning-message {
   text-decoration: underline; }
 
-/* Colours */
 .about {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -54,7 +78,7 @@ html {
   overflow-y: scroll; }
 
 body {
-  background-color: #fff;
+  background-color: #f2f2f2;
   background-repeat: repeat;
   font-family: "Open Sans", sans-serif;
   font-size: 14px; }
@@ -91,29 +115,38 @@ p {
   line-height: 1.6;
   text-align: center; }
 
-#pagination {
-  text-align: center;
-  margin: 10px 0; }
+.blog {
+  padding-top: 60px;
+  padding-bottom: 60px; }
 
-.post_metadata {
-  border-bottom: 1px solid #DDDDDD;
-  padding-bottom: 5px; }
-
-.post-previous, .post-next {
-  font-size: 0;
-  margin: 0 15px; }
-
-.post-previous::before {
-  content: "\2190";
-  font-size: 14px;
-  display: inline; }
-
-.post-next::after {
-  content: "\2192";
-  font-size: 14px; }
-
-.post-list {
-  margin-bottom: 10px; }
+.blog-preview {
+  height: 300px; }
+  .blog-preview a {
+    overflow: hidden;
+    text-decoration: none; }
+    .blog-preview a .img-wrapper {
+      height: 100px;
+      overflow: hidden;
+      margin-bottom: 15px; }
+    .blog-preview a img {
+      width: 100%;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
+      .blog-preview a img:hover {
+        -webkit-transform: scale(1.4);
+        /* Safari and Chrome */
+        -moz-transform: scale(1.4);
+        /* Firefox */
+        -ms-transform: scale(1.4);
+        /* IE 9 */
+        -o-transform: scale(1.4);
+        /* Opera */
+        transform: scale(1.4); }
+  .blog-preview span {
+    display: block; }
 
 .post-title {
   color: #3a0000;
@@ -134,6 +167,7 @@ a span.post-date {
   border-bottom: 0;
   padding-bottom: 5px;
   margin-bottom: 5px;
+  margin-top: 15px;
   text-decoration: none; }
 
 .post-summary h1 {
@@ -151,15 +185,21 @@ a span.post-date {
 .blog-post-summary {
   margin-bottom: 5px; }
 
-#blog_search {
+.blog-search {
   margin-bottom: 40px; }
 
-#current_page_link {
-  text-decoration: underline; }
-
 #site-search {
+  display: block;
   margin: 20px 0 40px;
-  width: 100%; }
+  width: 100%;
+  text-align: center; }
+
+.select2-container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 300px; }
 
 #post-not-found img {
   margin-bottom: 20px; }
@@ -193,6 +233,18 @@ pre {
   font-weight: bold;
   color: #92131C; }
 
+.page-banner {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: url("/static/dannywebsite/images/congruent_pentagon.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 240px;
+  color: #1b0d0d; }
+  .page-banner h1 {
+    color: #1b0d0d; }
+
 .contact {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -219,7 +271,7 @@ pre {
     font-weight: 700;
     text-transform: uppercase; }
     .contact form input[type='submit']:hover {
-      color: #1b0d0d; }
+      background-color: #107360; }
   .contact form .validation-warning {
     background-color: #9d4646;
     color: #fff; }
