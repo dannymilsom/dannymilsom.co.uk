@@ -839,13 +839,6 @@ html[dir="rtl"] .select2-container-multi .select2-search-choice-close {
   margin-bottom: 10px;
   width: 25%; }
 
-.welcome-banner {
-  background: url("http://s3.amazonaws.com/usersthink/06-large.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  height: 1000px; }
-
 html {
   overflow-y: scroll; }
 
@@ -1139,19 +1132,19 @@ nav li a {
 .navbar-toggle.collapsed .bottom-bar {
   transform: rotate(0); }
 
-#social-icons li a {
+.social-icons li a {
   color: #3a0000; }
 
-#social-icons .fa-inverse:hover {
+.social-icons .fa-inverse:hover {
   color: #16a085; }
 
-#social-icons {
+.social-icons {
   list-style-type: none;
   text-align: center;
   padding-left: 0;
   margin-bottom: 20px; }
 
-#social-icons li {
+.social-icons li {
   display: inline; }
 
 /**** Side Projects *****/

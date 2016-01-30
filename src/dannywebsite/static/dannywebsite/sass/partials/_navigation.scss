@@ -63,15 +63,15 @@ nav li a {
   transform: rotate(0);
 }
 
-#social-icons li a { color: $burgandy; }
+.social-icons li a { color: $burgandy; }
 
-#social-icons .fa-inverse:hover { color: #16a085; }
+.social-icons .fa-inverse:hover { color: #16a085; }
 
-#social-icons {
+.social-icons {
   list-style-type: none;
   text-align: center;
   padding-left: 0;
   margin-bottom: 20px;
 }
 
-#social-icons li { display: inline; }
+.social-icons li { display: inline; }
