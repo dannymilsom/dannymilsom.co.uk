@@ -211,37 +211,8 @@ Danny Milsom | Home
                or via good old fashioned email!</p>
           </div>
           <div class="section-body col-xs-12">
-            <ul id="social-icons">
-              <li>
-                <a class="fa-stack fa-lg" href="{{ GITHUB_URL }}"
-                   target="_blank" title="GitHub Profile">
-                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                </a>
-              </li>
-              <li>
-                <a class="fa-stack fa-lg" href="{{ STACKOVERFLOW_URL }}"
-                   target="_blank" title="Stack Overflow Profile">
-                  <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
-                </a>
-              </li>
-              <li>
-                <a class="fa-stack fa-lg" href="{{ LINKEDIN_URL }}"
-                   target="_blank" title="Linkedin Profile">
-                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-                </a>
-              </li>
-              <li>
-                <a class="fa-stack fa-lg" href="{{ TWITTER_URL }}"
-                   target="_blank" title="Twitter Account">
-                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                </a>
-              </li>
-              <li>
-                <a class="fa-stack fa-lg" href="{{ INSTAGRAM_URL }}"
-                   target="_blank" title="Instagram Account">
-                  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-                </a>
-              </li>
+            <ul class="social-icons">
+              {% include 'inc/social-icons.html' %}
             </ul>
             <div class="row">
               {% load crispy_forms_tags %}
