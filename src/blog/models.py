@@ -1,5 +1,6 @@
 from django.core.urlresolvers import reverse
 from django.db import models
+from django.utils.text import slugify
 
 from .constants import BLOG_POST_CATEGORIES
 
@@ -21,6 +22,11 @@ class Post(models.Model):
         choices=TAG_CHOICES,
         default='Python',
     )
+
+    def save(self, *args, **kwargs):
+        if not self.id and not self.slug:
+            self.slug = slugify(self.title)
+        super(Post, self).save(*args, **kwargs)
 
     def __unicode__(self):
         return self.title
