@@ -13,7 +13,7 @@ class Post(models.Model):
 
     title = models.CharField(max_length=100)
     summary = models.TextField(max_length=500)
-    message = models.TextField(max_length=1000)
+    message = models.TextField(max_length=10000)
     date = models.DateField()
     author = models.CharField(max_length=100)
     slug = models.SlugField(max_length=40)
