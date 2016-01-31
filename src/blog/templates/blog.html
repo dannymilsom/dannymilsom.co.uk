@@ -52,24 +52,6 @@ Danny Milsom | Blog
     {% endfor %}
   </div>
 {% endif %}
-  <div class="blog-search row">
-    <div class="col-xs-12">
-      <select id="site-search" class="hidden-xs center-block text-center"
-              onchange="location = this.options[this.selectedIndex].value;">
-        <option></option>
-        <optgroup label="Categories">
-          {% for category in categories %}
-            <option value=/blog/tags/{{ category|lower }}>{{ category }}</option>
-            {% endfor %}
-        </optgroup>
-        <optgroup label="Posts">
-          {% for post in posts %}
-            <option value=/blog/{{ post.slug }}>{{ post.title }}</option>
-          {% endfor %}
-        </optgroup>
-      </select>
-    </div>
-  </div>
 </div>
 {% endblock %}
 

@@ -187,13 +187,6 @@ a span.post-date {
   width: 100%;
   text-align: center; }
 
-.select2-container {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  width: 300px; }
-
 #post-not-found img {
   margin-bottom: 20px; }
 
@@ -369,8 +362,7 @@ nav li a {
 .social-icons {
   list-style-type: none;
   text-align: center;
-  padding-left: 0;
-  margin-bottom: 20px; }
+  padding-left: 0; }
 
 .social-icons li {
   display: inline; }

@@ -4,15 +4,7 @@
   var layout = {
     init: function() {
 
-      this.prepareDOM();
       this.bindListeners();
-
-    },
-    prepareDOM: function() {
-
-      $("#site-search").select2({
-        placeholder: 'Find a blog post'
-      });
 
     },
     bindListeners: function() {

@@ -26,7 +26,6 @@ gulp.task('styles', function() {
 // Styles sources
 var styles_src = [
     path.join(css_dir, 'vendor', 'bootstrap.min.css'),
-    path.join(css_dir, 'vendor', 'select2.css'),
     path.join(css_dir, 'layout.css'),
     path.join(css_dir, 'main.css'),
 ]
@@ -42,7 +41,6 @@ gulp.task('concat-styles', function() {
 var scripts_src = [
     path.join(js_dir, 'vendor', 'jquery.min.js'),
     path.join(js_dir, 'vendor', 'jquery-migrate-1.0.0.min.js'),
-    path.join(js_dir, 'vendor', 'select2.min.js'),
     path.join(js_dir, 'vendor', 'bootstrap.min.js'),
     path.join(js_dir, 'vendor', 'matchMedia.js'),
     path.join(js_dir, 'layout.js'),
