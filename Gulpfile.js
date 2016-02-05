@@ -41,6 +41,8 @@ gulp.task('concat-styles', function() {
 var scripts_src = [
     path.join(js_dir, 'vendor', 'jquery.min.js'),
     path.join(js_dir, 'vendor', 'jquery-migrate-1.0.0.min.js'),
+    path.join(js_dir, 'vendor', 'underscore-min.js'),
+    path.join(js_dir, 'vendor', 'backbone-min.js'),
     path.join(js_dir, 'vendor', 'bootstrap.min.js'),
     path.join(js_dir, 'vendor', 'matchMedia.js'),
     path.join(js_dir, 'layout.js'),
