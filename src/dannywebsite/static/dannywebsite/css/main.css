@@ -47,8 +47,8 @@
   text-decoration: underline; }
 
 .about {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   background-color: #fff;
   margin-bottom: 20px; }
   .about p {
@@ -108,92 +108,50 @@ p {
   line-height: 1.6;
   text-align: center; }
 
+/**** POST LIST *****/
 .blog {
-  padding-top: 60px;
-  padding-bottom: 60px; }
-
-.blog-post-body h1, .blog-post-body h2, .blog-post-body h3, .blog-post-body h4, .blog-post-body h5, .blog-post-body h6 {
-  text-align: left; }
-
-.blog-post-body p {
-  text-align: left; }
-
-.blog-preview {
-  height: 300px; }
-  .blog-preview a {
-    overflow: hidden;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-bottom: 0; }
+  .blog .blog-posts {
+    padding-top: 40px;
+    padding-bottom: 40px; }
+  .blog .post-metadata {
+    display: block;
+    padding-bottom: 20px;
+    text-align: center;
     text-decoration: none; }
-    .blog-preview a .img-wrapper {
-      height: 100px;
-      overflow: hidden;
-      margin-bottom: 15px; }
-    .blog-preview a img {
-      width: 100%;
-      -webkit-transition: all 0.5s ease;
-      -moz-transition: all 0.5s ease;
-      -o-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-      transition: all 0.5s ease; }
-      .blog-preview a img:hover {
-        -webkit-transform: scale(1.4);
-        /* Safari and Chrome */
-        -moz-transform: scale(1.4);
-        /* Firefox */
-        -ms-transform: scale(1.4);
-        /* IE 9 */
-        -o-transform: scale(1.4);
-        /* Opera */
-        transform: scale(1.4); }
-  .blog-preview span {
-    display: block; }
+    .blog .post-metadata:hover {
+      text-decoration: underline;
+      cursor: pointer; }
+  .blog .post-title {
+    color: #3a0000;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none; }
+  .blog .post-date {
+    font-weight: lighter;
+    color: #808080;
+    font-size: 14px; }
 
-.post-title {
-  color: #3a0000;
-  font-size: 18px;
-  display: block;
-  text-decoration: none; }
-
-a span.post-date {
-  text-decoration: none; }
-
-.post-date {
-  font-weight: lighter;
-  color: #808080;
-  font-size: 14px; }
-
-.post-summary {
+/**** SINGLE POST *****/
+.single-blog-post {
+  padding-top: 40px;
+  padding-bottom: 40px;
   color: #333;
   border-bottom: 0;
   padding-bottom: 5px;
-  margin-bottom: 5px;
-  margin-top: 15px;
+  margin: 10px 0 5px 0;
   text-decoration: none; }
+  .single-blog-post .section-header p {
+    text-align: center; }
+  .single-blog-post p {
+    text-align: left; }
+  .single-blog-post h2, .single-blog-post h3 {
+    font-size: 22px;
+    text-align: left; }
 
-.post-summary h1 {
-  font-size: 30px; }
-
-.post-summary h2 {
-  font-size: 24px; }
-
-.post-summary-text {
-  display: block;
-  font-weight: normal;
-  font-size: 14px;
-  color: #333; }
-
-.blog-post-summary {
-  margin-bottom: 5px; }
-
-#site-search {
-  display: block;
-  margin: 20px 0 40px;
-  width: 100%;
-  text-align: center; }
-
-#post-not-found img {
-  margin-bottom: 20px; }
-
-#blog-comments {
+.post-comments {
   margin-top: 20px; }
 
 /***** CODE SNIPPETS *****/
@@ -222,21 +180,12 @@ pre {
   font-weight: bold;
   color: #92131C; }
 
-.page-banner {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background: url("/static/dannywebsite/images/congruent_pentagon.png");
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  height: 240px;
-  color: #1b0d0d; }
-  .page-banner h1 {
-    color: #1b0d0d; }
+#post-not-found img {
+  margin-bottom: 20px; }
 
 .contact {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   background-color: #2c3e50;
   color: #fff; }
   .contact .section-header:after {
@@ -293,10 +242,10 @@ pre {
     background-color: #3a0000;
     margin-left: -85px; }
 
-#music {
+.music {
   background-color: #f2f2f2;
-  padding-top: 60px;
-  padding-bottom: 60px; }
+  padding-top: 40px;
+  padding-bottom: 40px; }
 
 nav {
   font-size: 14px;
@@ -368,73 +317,24 @@ nav li a {
     color: #16a085; }
 
 /**** Side Projects *****/
-#side-projects {
+.side-projects {
   background-color: #7f8c8d;
   color: #fff;
   padding: 60px 0; }
-  #side-projects .section-header:after {
+  .side-projects .section-header:after {
     background-color: #f2f2f2; }
-  #side-projects figure {
-    margin: 0;
-    position: relative;
-    overflow: hidden; }
-    #side-projects figure img {
-      display: block;
-      position: relative;
-      height: 300px;
-      max-width: 100%;
-      transition: transform 0.4s; }
-  #side-projects figcaption {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 20px;
-    background: #2c3e50;
-    color: #ed4e6e;
-    height: 60px;
-    width: 100%;
-    top: auto;
-    bottom: 0;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: transform 0.4s, opacity 0.1s 0.3s; }
-    #side-projects figcaption span {
-      color: #fff;
-      display: block;
-      text-align: center; }
-  #side-projects figure:hover img,
-  #side-projects figure.cs-hover img {
-    transform: scale(1.25); }
-  #side-projects figure:hover figcaption,
-  #side-projects figure.cs-hover figcaption {
-    opacity: 1;
-    transform: translateY(0px);
-    transition: transform 0.4s, opacity 0.1s; }
-
-#side-projects h2, #side-projects a {
-  color: #fff; }
-
-.soundcloud-likes {
-  height: 300px;
-  background-color: #7f8c8d; }
-
-.personal-site {
-  height: 300px;
-  background-color: #7f8c8d;
-  margin-top: 30px; }
-
-.planning-poker {
-  height: 300px;
-  background-color: #7f8c8d; }
-
-.stronger {
-  height: 300px;
-  background-color: #7f8c8d;
-  margin-top: 30px; }
+  .side-projects ul {
+    padding-left: 0;
+    line-height: 1.6; }
+  .side-projects li {
+    text-align: center;
+    list-style-position: inside; }
+  .side-projects h2, .side-projects a {
+    color: #fff; }
 
 .technical-skills {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   background-color: #f4f5f5; }
   .technical-skills img {
     margin-left: auto;
@@ -444,8 +344,6 @@ nav li a {
     display: block;
     font-weight: 700;
     text-align: center; }
-  .technical-skills p {
+  .technical-skills .skill-category p {
     color: #1b0d0d;
-    display: block; }
-  .technical-skills .category {
-    text-align: center; }
+    text-align: justify; }

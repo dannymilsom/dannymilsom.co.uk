@@ -5,32 +5,30 @@ Danny Milsom | Blog
 {% endblock %}
 
 {% block message %}
-<div class="page-banner">
-  {% if latest_posts %}
-    <h1>Latest Blog Posts</h1>
-    <p>Ramblings about web development...</p>
-  {% else %}
-    <h1>{{ topic|title }} Blog Posts</h1>
-    <p>Ramblings about {{ topic|lower }}...</p>
-  {% endif %}
-</div>
+
 <div class="container">
   {% if blog_list %}
     <section class="blog">
-      <div class="row">
-      {% for post in blog_list %}
-        <div class="blog-preview col-xs-12 col-sm-6 col-md-4">
-          <a href="/blog/{{ post.slug }}"
-             title="Read blog post">
-              <div class="img-wrapper">
-                <img src="/static/dannywebsite/images/book.jpg">
-              </div>
-              <span class="post-title">{{ post.title }} </span>
-              <span class="post-date">{{ post.date }} </span>
-              <span class="post-summary"> {{ post.summary }}</span>
+      <div class="section-header">
+        {% if latest_posts %}
+          <h1>Latest Blog Posts</h1>
+          <p>Ramblings about web development...</p>
+        {% else %}
+          <h1>{{ topic|title }} Blog Posts</h1>
+          <p>Ramblings about {{ topic|lower }}...</p>
+        {% endif %}
+      </div>
+      <div class="blog-posts">
+        <div class="row">
+        {% for post in blog_list %}
+          <a class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 post-metadata"
+             href="/blog/{{ post.slug }}">
+            <span class="post-title">{{ post.title }} </span>
+            <span class="post-date">{{ post.date }} </span>
+            <p class="post-summary">{{ post.summary }}</p>
           </a>
+        {% endfor %}
         </div>
-      {% endfor %}
       </div>
     </section>
   {% else %}
@@ -43,13 +41,15 @@ Danny Milsom | Blog
 <div class="container">
 {% if blog_list.paginator.num_pages > 1 %}
   <div class="pagination" class="row">
-    {% for page in page_range %}
-      {% if blog_list.number == page %}
-        <a href="?page={{ page }}" class="current_page">{{page}}</a>
-      {% else %}
-        <a href="?page={{ page }}">{{page}}</a>
-      {% endif %}
-    {% endfor %}
+    <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+      {% for page in page_range %}
+        {% if blog_list.number == page %}
+          <a href="?page={{ page }}" class="current_page">{{page}}</a>
+        {% else %}
+          <a href="?page={{ page }}">{{page}}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
 {% endif %}
 </div>

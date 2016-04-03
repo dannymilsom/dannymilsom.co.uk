@@ -13,10 +13,11 @@
     text-align: center;
   }
 
-  p {
-    color: $light-black;
-    display: block;
+  .skill-category {
+    p {
+      color: $light-black;
+      text-align: justify;
+    }
   }
 
-  .category { text-align: center; }
 }

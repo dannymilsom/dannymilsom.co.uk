@@ -1,81 +1,22 @@
 /**** Side Projects *****/
 
-#side-projects {
+.side-projects {
   @include section-header-color($soundcloud-white);
   background-color: #7f8c8d;
   color: $white;
   padding: 60px 0;
 
-  figure {
-    margin: 0;
-    position: relative;
-    overflow: hidden;
-
-    img {
-      display: block;
-      position: relative;
-      height: 300px;
-      max-width: 100%;
-      transition: transform 0.4s;
-    }
+  ul {
+    padding-left: 0;
+    line-height: 1.6;
   }
 
-  figcaption {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 20px;
-    background: #2c3e50;
-    color: #ed4e6e;
-    height: 60px;
-    width: 100%;
-    top: auto;
-    bottom: 0;
-    opacity: 0;
-    transform: translateY(100%);
-    transition: transform 0.4s, opacity 0.1s 0.3s;
-
-   span {
-    color: $white;
-    display: block;
+  li {
     text-align: center;
-    }
+    list-style-position: inside;
   }
 
-  figure:hover img,
-  figure.cs-hover img {
-    transform: scale(1.25);
-  }
-
-  figure:hover figcaption,
-  figure.cs-hover figcaption {
-    opacity: 1;
-    transform: translateY(0px);
-    transition: transform 0.4s, opacity 0.1s;
+  h2, a {
+    color: $white;
   }
 }
-
-#side-projects h2, #side-projects a { color: $white; }
-
-.soundcloud-likes {
-  height: 300px;
-  background-color: #7f8c8d;
-}
-
-.personal-site {
-  height: 300px;
-  background-color: #7f8c8d;
-  margin-top: 30px;
-}
-
-.planning-poker{
-  height: 300px;
-  background-color: #7f8c8d;
-}
-
-.stronger {
-  height: 300px;
-  background-color: #7f8c8d;
-  margin-top: 30px;
-}
-

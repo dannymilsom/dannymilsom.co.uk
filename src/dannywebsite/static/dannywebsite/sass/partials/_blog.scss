@@ -1,97 +1,55 @@
+/**** POST LIST *****/
+
 .blog {
   @include section-padding();
-}
-
-.blog-post-body {
-  h1, h2, h3, h4, h5, h6 {
-    text-align: left;
+  padding-bottom: 0;
+  .blog-posts {
+    @include section-padding();
   }
-  p {
-    text-align: left;
-  }
-}
-
-.blog-preview {
-  height: 300px;
-
-  a {
-    overflow: hidden;
+  .post-metadata {
+    display: block;
+    padding-bottom: 20px;
+    text-align: center;
     text-decoration: none;
-
-    .img-wrapper {
-      height: 100px;
-      overflow: hidden;
-      margin-bottom: 15px;
-    }
-
-    img {
-      width: 100%;
-
-      -webkit-transition: all 0.5s ease;
-      -moz-transition: all 0.5s ease;
-      -o-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-      transition: all 0.5s ease;
-      &:hover {
-        -webkit-transform:scale(1.4); /* Safari and Chrome */
-        -moz-transform:scale(1.4); /* Firefox */
-        -ms-transform:scale(1.4); /* IE 9 */
-        -o-transform:scale(1.4); /* Opera */
-         transform:scale(1.4);
-      }
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
     }
   }
-
-  span { display: block; }
+  .post-title {
+    color: $burgandy;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .post-date {
+    font-weight: lighter;
+    color: #808080;
+    font-size: 14px;
+  }
 }
 
-.post-title {
-  color: $burgandy;
-  font-size: 18px;
-  display: block;
-  text-decoration: none;
-}
 
-a span.post-date { text-decoration: none; }
+/**** SINGLE POST *****/
 
-.post-date {
-  font-weight: lighter;
-  color: #808080;
-  font-size: 14px;
-}
-
-.post-summary { 
+.single-blog-post {
+  @include section-padding();
   color: #333;
   border-bottom: 0;
   padding-bottom: 5px;
-  margin-bottom: 5px;
-  margin-top: 15px;
+  margin: 10px 0 5px 0;
   text-decoration: none;
+  .section-header {
+    p { text-align: center; }
+  }
+  p { text-align: left; }
+  h2, h3 {
+    font-size: 22px;
+    text-align: left;
+  }
 }
 
-.post-summary h1 { font-size: 30px; }
-
-.post-summary h2 { font-size: 24px; }
-
-.post-summary-text {
-  display: block;
-  font-weight: normal;
-  font-size: 14px;
-  color: #333;
-}
-
-.blog-post-summary { margin-bottom: 5px; }
-
-#site-search {
-  display: block;
-  margin: 20px 0 40px;
-  width: 100%;
-  text-align: center;
-}
-
-#post-not-found img { margin-bottom: 20px; }
-
-#blog-comments { margin-top: 20px; }
+.post-comments { margin-top: 20px; }
 
 /***** CODE SNIPPETS *****/
 
@@ -124,15 +82,4 @@ pre {
   color: #92131C;
 }
 
-.page-banner {
-  @include section-padding();
-  background: url('/static/dannywebsite/images/congruent_pentagon.png');
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  height: 240px;
-
-  color:  $light-black;
-
-  h1 { color: $light-black; }
-}
+#post-not-found img { margin-bottom: 20px; }

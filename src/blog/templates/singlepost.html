@@ -9,25 +9,31 @@ Danny Milsom | Blog
 {% endblock %}
 
 {% block message %}
-<div class="page-banner">
-  <h1>{{ post.title }}</h1>
-</div>
+
 <div class="container">
-  <section class="blog-post-body" class="row post-summary">
-    <div class="col-lg-12 col-md-12">
+  <section class="single-blog-post">
+    <div class="section-header">
+      <h1>{{ post.title }}</h1>
+      <p>{{ post.summary }}</p>
+    </div>
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
       <p>{{ post.message|safe|linebreaks }}</p>
     </div>
   </section>
+
   <section class="pagination" class="row text-center">
-    <a href="/blog/{{ prev_post.slug }}"
-       class="btn btn-default pull-left previous"> Previous Post</a>
-    <a href="/blog/tags/{{ post.tags|lower }}"
-       class="btn btn-default">More {{ post.tags|title }} Posts</a>
-    <a href="/blog/{{ next_post.slug }}"
-       class="btn btn-default pull-right next">Next Post </a>
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+      <a href="/blog/{{ prev_post.slug }}"
+         class="btn btn-default pull-left previous"> Previous Post</a>
+      <a href="/blog/tags/{{ post.tags|lower }}"
+         class="btn btn-default">More {{ post.tags|title }} Posts</a>
+      <a href="/blog/{{ next_post.slug }}"
+         class="btn btn-default pull-right next">Next Post </a>
+    </div>
   </section>
-  <section id="blog-comments" class="row">
-    <div class="col-lg-12 col-md-12">
+
+  <section class="post-comments" class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
       {% load disqus_tags %}
       {% set_disqus_identifier post.slug %}
       {% set_disqus_url absolute_url %}
